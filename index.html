@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- Link to Bootstrap  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Weather Dashboard // Bootstrap UI Components</title>
+</head>
+<body>
+<header>
+   <div class = "display text text-center bg-primary" >
+    <h1 class = "display text text-center text-light"> Weather Dashboard</h1>
+</div>
+</header>
+    
+<main class="d-flex min-vh-100">
+    <div class="container-fluid my-auto bg-light">
+      
+      <h1 class="display text-left text-dark">Search for a City:</h1>
+      <div class="row justify-content-left">
+        <!-- Default Form -->
+    
+        <div>
+            <div class="col-12 col-md-4- mb-1 p-4 bg-light">
+                <div class="row">
+                    <form>
+                         <div>
+                         <input place holder ="city" type="location" class="city" id="city-input" >
+                         </div>
+                         <div>
+                         <input place holder ="lat" type="location" class="coordinates" id="lat-input" >
+                        </div>
+                         <div>
+                         <input place holder ="lon" type="location" class="coordinates" id="lon-input" >
+                        </div>
+                         <div>
+                         <button class="btn btn-primary btn-block" id="search" style =  "margin-bottom: 5px ; margin-top: 5px">Search</button>
+                         
+                        </div>
+                         <div>
+                            <button type="city" class="btn btn-secondary btn-block">New York</button>
+                            <button type="city" class="btn btn-secondary btn-block">Denver</button>
+                            <button type="city" class="btn btn-secondary btn-block">San Franscisco</button>
+                            <button type="city" class="btn btn-secondary btn-block">Austin</button>
+                            <button type="city" class="btn btn-secondary btn-block">Miami</button>
+                            <button type="city" class="btn btn-secondary btn-block">Chicago</button>
+                         </div>
+                    </form>
+                         <div class="col-12 col-md-9 bg-light">
+                          <div class="card" style="width: 18rem; background-color:beige;">
+                             <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title" ><span id="data-date"> </span></h5>
+                                <p class="card-text"></span>Current Weather in <span id="data-city"> </span></p>
+                                <p class="card-text">Lattitude: <span id = "data-lat"></span></p>
+                                <p class="card-text">Longitude: <span id = "data-long"></span></p>
+                                <p class="card-text">Weather: <span id = "data-curweather"></span></p>
+                                <p class="card-text"> Temp: <span id="data-temp"> </span> Deg. F</p>
+                                <p class="card-text"> Wind Speed: <span id = "data-wind"></span>MPH</p>
+                                <p class="card-text">Humidity: <span id = "data-humidity"></span></p>
+                                <p class="card-text">UVI: <span id = "data-uvi"></span></p>
+                                
+                              
+                            </div>
+                          </div>
+                         </div>
+                   
+                </div>
+            </div>
+     
+        <div>
+            <div class="col-12 col-md-3-mb-1 p-1 bg-white">
+                <div class="row justify-content-left">
+                    <div class="col-3 col-md-3- mb-1 p-1 bg-light">
+                        <div class="card" style="width: 14rem; background-color:beige">
+                             <img class="card-img-top" src="..." alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Date <span id="fd1data-date"> </span></h5>
+                                <p class="card-text">Temp Max: <span id="fd1data-tempmax"> </span> Deg. F</p>
+                                <p class="card-text">Temp Min: <span id="fd1data-tempmin"> </span> Deg. F</p>
+                                <p class="card-text">Wind Speed: <span id="fd1data-wind"> </span> MPH</p>
+                                <p class="card-text">Weather: <span id="fd1data-weather"> </span></p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-3 col-md-3- p-1 bg-white">
+                       <div class="card" style="width: 14rem; background-color:beige">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                           <div class="card-body">
+                            <h5 class="card-title">Date <span id="fd2data-date"> </span></h5>
+                            <p class="card-text">Temp Max: <span id="fd2data-tempmax"> </span> Deg. F</p>
+                            <p class="card-text">Temp Min: <span id="fd2data-tempmin"> </span> Deg. F</p>
+                            <p class="card-text">Wind: <span id="fd2data-wind"> </span> MPH</p>
+                            <p class="card-text">Weather: <span id="fd2data-weather"> </span></p>
+                            
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-3 col-md-3- bg-white">
+                       <div class="card" style="width: 14rem; background-color:beige">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                           <div class="card-body">
+                            <h5 class="card-title">Date <span id="fd3data-date"> </span></h5>
+                            <p class="card-text">Temp Max: <span id="fd3data-tempmax"> Deg. F</span></p>
+                            <p class="card-text">Temp Min: <span id="fd3data-tempmin"> Deg. F</span></p>
+                            <p class="card-text">Wind: <span id="fd3data-wind"> </span> MPH</p>
+                            <p class="card-text">Weather: <span id="fd3data-weather"> </span></p>
+                        
+                           </div>
+                       </div>
+                   </div>
+
+                    <div class="col-3 col-md-3- bg-white">
+                       <div class="card" style="width: 14rem; background-color:beige">
+                            <img class="card-img-top" src="..." alt="Card image cap">
+                           <div class="card-body">
+                            <h5 class="card-title">Date <span id="fd4data-date"> </span></h5>
+                            <p class="card-text">Temp Max: <span id="fd4data-tempmax"> Deg. F</span></p>
+                            <p class="card-text">Temp Min: <span id="fd4data-tempmin"> Deg. F</span></p>
+                            <p class="card-text">Wind: <span id="fd4data-wind"> </span> MPH</p>
+                            <p class="card-text">Weather: <span id="fd4data-weather"> </span></p>
+                        </div>
+                       </div>
+                   </div>
+                   
+                </div>
+            
+            </div>
+        </div> 
+    </div>  
+</div>  
+</div>
+ </main>
+
+</body>
+<script src = "assets/script.js"></script>
+<!-- <script src = "assets/scriptll.js"></script> -->
+<!-- <script src=https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap-grid.min.css></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js" ></script>
+</html>
