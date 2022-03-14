@@ -138,7 +138,7 @@ function getApi(requestUrl) {
 //         responseDatefd1.textContent = date0.getMonth()+1+ "/"+date0.getDate()+ "/"+date0.getFullYear();
        
 // }
-
+        responseTempmaxfd1.textContent = data.daily[1].temp.max;
         responseTempminfd1.textContent = data.daily[1].temp.min;
         responseWeatherfd1.textContent = data.daily[1].weather[0].description;
         responseWindfd1.textContent = data.daily[1].wind_speed;
